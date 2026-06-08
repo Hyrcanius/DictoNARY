@@ -28,7 +28,7 @@ def ingresar_usuario(usuarios):
     if len(contra) > 8:
         for i in range(len(contra)):
             pos = contra[i]
-            if pos == "1" or pos == "2" or pos == "3" or pos == "4" or pos == "5" or pos == "6" or pos == "7" or pos == "8" or pos == "9" or pos == "0":
+            if (pos == "1") or (pos == "2") or (pos == "3") or (pos == "4") or (pos == "5") or (pos == "6") or (pos == "7") or (pos == "8") or (pos == "9") or (pos == "0"):
                 cont = cont + 1
         if cont > 0:
             if " " in contra:
@@ -36,12 +36,12 @@ def ingresar_usuario(usuarios):
                 return
             else:
                 usuarios[nombre_usr] = [sexo, contra]
-                print(usuarios)
 
 def buscar_usuario(usuarios):
     nombre = input("Ingrese el nombre de usuario: ").capitalize().strip()
     if nombre in usuarios:
-        print(usuarios[nombre])
+        sexo, contrasena = usuarios[nombre]
+        print(f"{sexo}, {contrasena}")
     else:
         print("No se encuentra el usuario.")
         return
