@@ -14,13 +14,12 @@ def imprimir_tareas(lista_tareas):
         print("No hay tareas pendientes.")
     else:
         lista_tareas.sort()
-        for tarea in lista_tareas:
-            print(f"- {tarea}")
+        for i in range(len(lista_tareas)):
+            print(f"{i + 1} - {lista_tareas[i]}")
 
 def agregar_tarea(lista_tareas):
     nueva_tarea = input("Ingrese la nueva tarea: ")
     lista_tareas.append(nueva_tarea.strip().capitalize())
-    print(lista_tareas)
 
 def eliminar_tarea(lista_tareas):
     quitar_tarea = input("Ingrese la tarea que quiere eliminar: ").strip().capitalize()

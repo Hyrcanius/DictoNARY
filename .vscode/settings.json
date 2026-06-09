@@ -1,0 +1,6 @@
+{
+    // Workspace Python interpreter - points to the venv we created
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv313\\Scripts\\python.exe",
+    // Backwards-compatible setting for older extensions
+    "python.pythonPath": "${workspaceFolder}\\.venv313\\Scripts\\python.exe"
+}
