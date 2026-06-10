@@ -96,6 +96,16 @@ def buscar_usuario(usuarios):
     else:
         print("No se encuentra el usuario.")
         return
+    
+def buscar_usuario2(usuarios2):
+    nombre = input("Ingrese el nombre de usuario: ").capitalize().strip()
+    if nombre in usuarios2:
+        sexo = {usuarios2[nombre[sexo]]}
+        contrasena = {usuarios2[nombre][contrasena]}
+        print(f"{sexo}, {contrasena}")
+    else:
+        print("No se encuentra el usuario.")
+        return    
 
 def eliminar_usuario(usuarios):
     nombre = input("Ingrese el nombre de usuario: ").capitalize()
@@ -114,7 +124,7 @@ while True:
     if op == 1:
         ingresar_usuario(usuarios)
     elif op == 2:
-        buscar_usuario(usuarios)
+        buscar_usuario2(usuarios2)
     elif op == 3:
         eliminar_usuario(usuarios)
     elif op == 4:
